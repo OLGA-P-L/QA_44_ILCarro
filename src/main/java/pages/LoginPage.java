@@ -1,5 +1,6 @@
 package pages;
 
+import dto.UserDto;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,6 +31,9 @@ public class LoginPage extends BasePage{
     @FindBy(xpath = "//h1[text()='Login failed']")
     WebElement errorMessageLogin;
 
+    @FindBy(xpath = "//input[@id='email']/..//div[@class='error']/div")
+    WebElement errorMessageInputEmail;
+
     public LoginPage typeLoginForm(String email, String password){
       inputEmail.sendKeys(email);
       inputPassword.sendKeys(password);
@@ -37,8 +41,20 @@ public class LoginPage extends BasePage{
 
 
     }
+
+    public LoginPage typeLoginForm(UserDto user){
+        inputEmail.sendKeys(user.getEmail());
+        inputPassword.sendKeys(user.getPassword());
+        return this;
+
+
+    }
     public boolean isTextInElementPresent_LoginSuccess(){
         return isTextInElementPresent(TextPopUpLoginSuccess, "Login in success");
+    }
+
+    public boolean isTextInElementPresent_ErrorEmail(String text){
+        return isTextInElementPresent(errorMessageInputEmail, text);
     }
 
     public boolean isTextInElementPresent_wrongLogin() {

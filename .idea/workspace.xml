@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddf4cc3e-c6c8-4352-91fa-1d3cdaa63b3c" name="Changes" comment="HW 06.09.24-ILCarro">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/SingUpPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/SingUpTests.java" afterDir="false" />
+    <list default="true" id="ddf4cc3e-c6c8-4352-91fa-1d3cdaa63b3c" name="Changes" comment="HW - added negative tests wrong login and wrong password">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/HeaderMenuItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/RandomUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -58,8 +59,10 @@
     "TestNG.HomeTests.executor": "Run",
     "TestNG.HomeTests.firstTest.executor": "Run",
     "TestNG.LoginTests.loginNegativeTest_wrongEmail.executor": "Run",
+    "TestNG.LoginTests.loginNegativeTest_wrongEmailWOAt_Enum.executor": "Run",
     "TestNG.LoginTests.loginNegativeTest_wrongPassword.executor": "Run",
     "TestNG.LoginTests.loginPositiveTest.executor": "Run",
+    "TestNG.LoginTests.loginPositiveTest_wrongEmail.executor": "Run",
     "TestNG.RegistrationTests.registrationPositiveTest.executor": "Run",
     "TestNG.SingUpTests.singUpPositiveTest.executor": "Run",
     "git-widget-placeholder": "master",
@@ -67,25 +70,7 @@
     "last_opened_file_path": "C:/QA44_Start_Selenium_correct"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.LoginTests.loginNegativeTest_wrongEmail">
-    <configuration name="HomeTests.firstTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="QA_44_ILCarro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.HomeTests" />
-      <option name="METHOD_NAME" value="firstTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.LoginTests.loginNegativeTest_wrongEmailWOAt_Enum">
     <configuration name="LoginTests.loginNegativeTest_wrongEmail" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="QA_44_ILCarro" />
       <extension name="coverage">
@@ -97,6 +82,24 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.LoginTests" />
       <option name="METHOD_NAME" value="loginNegativeTest_wrongEmail" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTests.loginNegativeTest_wrongEmailWOAt_Enum" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="QA_44_ILCarro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoginTests" />
+      <option name="METHOD_NAME" value="loginNegativeTest_wrongEmailWOAt_Enum" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -140,7 +143,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SingUpTests.singUpPositiveTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTests.loginPositiveTest_wrongEmail" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="QA_44_ILCarro" />
       <extension name="coverage">
         <pattern>
@@ -149,8 +152,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.SingUpTests" />
-      <option name="METHOD_NAME" value="singUpPositiveTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoginTests" />
+      <option name="METHOD_NAME" value="loginPositiveTest_wrongEmail" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -160,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTests.loginNegativeTest_wrongEmailWOAt_Enum" />
+        <item itemvalue="TestNG.LoginTests.loginPositiveTest_wrongEmail" />
+        <item itemvalue="TestNG.LoginTests.loginPositiveTest" />
         <item itemvalue="TestNG.LoginTests.loginNegativeTest_wrongEmail" />
         <item itemvalue="TestNG.LoginTests.loginNegativeTest_wrongPassword" />
-        <item itemvalue="TestNG.SingUpTests.singUpPositiveTest" />
-        <item itemvalue="TestNG.LoginTests.loginPositiveTest" />
-        <item itemvalue="TestNG.HomeTests.firstTest" />
       </list>
     </recent_temporary>
   </component>
@@ -201,14 +204,31 @@
       <option name="project" value="LOCAL" />
       <updated>1725651074247</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="HW - added negative tests wrong login and wrong password">
+      <option name="closed" value="true" />
+      <created>1726464836073</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1726464836073</updated>
+    </task>
+    <task id="LOCAL-00005" summary="HW - added negative tests wrong login and wrong password">
+      <option name="closed" value="true" />
+      <created>1726464857263</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1726464857263</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="HW 06.09.24" />
     <MESSAGE value="HW 06.09.24 - ILCarro" />
     <MESSAGE value="HW 06.09.24-ILCarro" />
-    <option name="LAST_COMMIT_MESSAGE" value="HW 06.09.24-ILCarro" />
+    <MESSAGE value="HW - added negative tests wrong login and wrong password" />
+    <option name="LAST_COMMIT_MESSAGE" value="HW - added negative tests wrong login and wrong password" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -224,8 +244,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/tests/LoginTests.java</url>
-          <line>19</line>
-          <properties class="tests.LoginTests" method="loginNegativeTest_wrongEmail">
+          <line>48</line>
+          <properties class="tests.LoginTests">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
