@@ -20,7 +20,7 @@ public class LoginTests extends ApplicationManager {
     }
 
     @Test
-    public void loginPositiveTest_wrongEmailWOAt(){
+    public void loginNegativeTest_wrongEmailWOAt(){
         UserDto user = new UserDto(generateString(5), generateString(7), generateString(10), "Qwerty123!");
         Assert.assertTrue(new HomePage(getDriver()).clickBtnLoginPage().typeLoginForm(user).clickBtnYallaPositive()
                 .isTextInElementPresent_ErrorEmail("It'snot look like email"));
@@ -37,6 +37,13 @@ public class LoginTests extends ApplicationManager {
                 .isTextInElementPresent_ErrorEmail("It'snot look like email")
         ;
     }
+    @Test
+    public void loginNegativeTest_passwordIsNull(){
+        Assert.assertTrue(new HomePage(getDriver())
+                .clickBtnLoginPage().typeLoginForm("plut@gmail.com","")
+                .clickBtnYallaPositive().isTextInElementPresent_PasswordIsNull("Password is required"));
+    }
+
 
 
 

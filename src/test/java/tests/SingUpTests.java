@@ -15,4 +15,12 @@ public class SingUpTests extends ApplicationManager {
         new HomePage(getDriver()).clickBtnSingUpPage().typeRegistrationForm("Olga","Polga",email,"Polga2010$").clickCheckBox().clickBtnYalla();
 
     }
+
+    @Test
+    public void SingUpNegativeTest_WrongEmail() {
+        Assert.assertTrue(new HomePage(getDriver()).clickBtnSingUpPage()
+                .typeRegistrationForm("Olga", "Plut", "op@gmailcom", "Plut2010!")
+                .clickCheckBox().clickBtnYalla().isTextInElementPresent_wrongEmailFormat("Wrong email format"));
+
+    }
 }

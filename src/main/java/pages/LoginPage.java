@@ -34,6 +34,9 @@ public class LoginPage extends BasePage{
     @FindBy(xpath = "//input[@id='email']/..//div[@class='error']/div")
     WebElement errorMessageInputEmail;
 
+    @FindBy(xpath = "//div[text()=' Password is required ']")
+    WebElement passwordIsNull;
+
     public LoginPage typeLoginForm(String email, String password){
       inputEmail.sendKeys(email);
       inputPassword.sendKeys(password);
@@ -73,5 +76,9 @@ public class LoginPage extends BasePage{
     pausa(3);
         btnYalla.click();
         return this;
+    }
+
+    public boolean isTextInElementPresent_PasswordIsNull(String text) {
+        return isTextInElementPresent(passwordIsNull,text);
     }
 }

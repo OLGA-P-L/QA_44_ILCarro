@@ -35,6 +35,9 @@ public class SingUpPage extends BasePage{
     @FindBy(xpath = "//h2[@class='message']")
     WebElement TextPopUpSingUpSuccess;
 
+    @FindBy(xpath = "//*[@class='error']//div")
+    WebElement wrongEmailFormat;
+
 
 
     public SingUpPage typeRegistrationForm(String name, String lastName, String email, String password) {
@@ -62,6 +65,10 @@ public class SingUpPage extends BasePage{
     }
     public boolean isTextInElementPresent_regSuccess(){
         return isTextInElementPresent(TextPopUpSingUpSuccess, "You are logged in success");
+    }
+
+    public boolean isTextInElementPresent_wrongEmailFormat(String text){
+        return isTextInElementPresent(wrongEmailFormat,text);
     }
 
 }
